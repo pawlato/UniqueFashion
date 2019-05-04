@@ -31,14 +31,13 @@ a:hover {
     -webkit-transition: .2s ease-in-out;
     -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out;
-    cursor: pointer;
     z-index: 10;
 }
 
 .menu {
     font-size: 30px;
     color: black;
-    position: fixed;
+    position: relative;
     z-index: 10;
     right: 100px;
     top: 25px;
@@ -90,6 +89,7 @@ a:hover {
     transform: rotate(45deg);
 }
 
+
 .nav-icon.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -122,7 +122,7 @@ a:hover {
     padding: 20px;
     list-style: none;
     background-color: #303030;
-    transition: .7s;
+    transition: .4s;
     border-bottom: 2px solid #606060;
     box-shadow: 10px 10px 30px #232323;
     border-left: 4px solid #606060;
@@ -133,8 +133,6 @@ a:hover {
     background-color: #606060;
     color: white;
     border-left: 4px solid #7e01a3;
-
-
 }
 
 .show-nav {
@@ -172,14 +170,14 @@ a:hover {
     height: 100px;
     background-color: #606060;
     display: none;
-    transition: 5s;
+    transition: 3s;
 }
 
 
 #logo-cover {
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/preston-tkanina-mini-zygzak-szary.jpg);
+    background-image: url(../img/large_103165.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -203,20 +201,23 @@ a:hover {
     text-align: center;
     font-size: 10vw;                /*wielkosc napisu UnIque Fashion*/
     opacity: 0;
-    transition: 7s;
+    transition: 1s;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 
-/*developer & designer*/
+/*podpis*/
 
 .container {
-    width: 100vw;
+    width: 10vw;
     text-align: center;
     position: absolute;
     top: 60%;
 }
 
 .ml5 {
-    position: relative;
+    position: center;
     font-weight: 300;
     font-size: 3.2vw;
     color: #402d2d;
@@ -225,37 +226,69 @@ a:hover {
 
 .ml5 .text-wrapper {
     position: relative;
-    top: 20px;
+    padding-left: 8.5em;
+    top: -120px;
     display: inline-block;
-    padding-top: 0.1em;
-    padding-right: 0.05em;
-    padding-bottom: 0.15em;
     line-height: 1em;
 }
 
-.ml5 .line {
+hr {
+    width: 200%;
+    color: #402d2d;
+}
+
+slider {
+    display: block;
+    width: 31em;
+    height: 31em;
+    overflow: hidden;
     position: absolute;
-    left: 0;
-    top: -2px;
-    bottom: 0;
-    margin: auto;
-    height: 3px;
-    width: 100%;
-    background-color: #402d2d;
-    transform-origin: 0.5 0;
 }
 
-.ml5 .ampersand {
-    font-weight: 400;
-    width: 1em;
-    margin-right: -0.1em;
-    margin-left: -0.1em;
+slider > * {
+    position: absolute;
+    display: block;
+    width: 31em;
+    height: 31em;
+    animation: slide 12s infinite;
+    overflow: hidden;
 }
 
-.ml5 .letters {
-    display: inline-block;
-    opacity: 0;
+slide:nth-child(1){
+    left: 0%;
+    animation-delay: -1s;
+    background-image: url(../img/obraz8.jpg);
+    background-position: center;
 }
+
+slide:nth-child(2){
+    animation-delay: 2s;
+    background-image: url(../img/obraz7.jpg);
+    background-position: center;
+}
+
+slide:nth-child(3){
+    animation-delay: 5s;
+    background-image: url(../img/obraz2.jpg);
+    background-position: center;
+}
+
+slide:nth-child(4){
+    left: 0%;
+    animation-delay: 8s;
+    background-image: url(../img/obraz1.jpg);
+    background-position: center;
+}
+
+@keyframes slide {
+    0% { left: 100%; width: 100%; }
+    5% { left: 0%; }
+    25% { left: 0%; }
+    30% { left: -100%; width: 100%; }
+    30.0001% { left: -100%; width: 0%; }
+    100% { left: 100%; width: 0%; }
+}﻿
+
 
 #scroll-down {
     width: 0px;
@@ -280,20 +313,16 @@ a:hover {
 
 /*break*/
 
-.break-cover {
+/*.break-cover {
     width: 100vw;
     height: 300px;
-    background: rgba(1,1,1,.5);
-    background: -webkit-linear-gradient(rgba(1,1,1,.2), rgba(1,1,1,.7)), linear-gradient(45deg, #eee, rgba(0,0,0,0));
-    background: -o-linear-gradient(rgba(1,1,1,.2), rgba(1,1,1,.7)), linear-gradient(45deg, #eee, rgba(0,0,0,0));
-    background: -moz-linear-gradient(rgba(1,1,1,.3), rgba(1,1,1,.7)), linear-gradient(45deg, #eee, rgba(0,0,0,0));
-    background: linear-gradient(rgba(1,1,1,.2), rgba(1,1,1,.7)), linear-gradient(45deg, #fff, rgba(0,0,0,0));
-}
+    background: linear-gradient(rgba(1,1,1,.03), rgba(1,1,1,.07)), linear-gradient(45deg, #fff, rgba(0,0,0,0));
+}*/
 
 .break {
     width: 100vw;
     height: 300px;
-    background-image: url(../img/szara-tkanina_53876-89252.jpg);
+    background-image: url(../img/fly-and-spin-through-heavenly-like-clouds-white-clouds-with-grey-blue-tint_bkxwwvwfsg_thumbnail-full01.png);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -303,8 +332,15 @@ a:hover {
 
 .sections {
     width: 100vw;
-    height: 100vh;
     background-color: #f7f7f7;
+}
+
+#about-us {
+    height: 100vh;
+}
+
+#our-offer {
+    height: 140vh;
 }
 
 .header-name {
@@ -345,7 +381,7 @@ a:hover {
 .text-about-us {
     opacity: 0;
     position: relative;
-    top: 100px;
+    top: 50px;
     transition: 1s;
     margin-top: 30px;
 }
@@ -375,214 +411,12 @@ table {
     text-decoration: none;
 }
 
-.logo-container {
-    position: relative;
-    width: 500px;
-    height: 500px;
-    bottom: 750px;
-    left: 50%;
-}
-
-.logo-back {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background-image: url(../img/design.png);
-    opacity:.05;
-    background-size: cover;
-    margin: auto;
-    overflow: hidden;
-}
-
 .reverse {
-    background-image: url(../img/szara-tkanina_53876-89252.jpg);
-}
-
-/*skills*/
-
-#my-skills {
-    height: auto;
-}
-
-#container-skills {
-    text-align: center;
-    color: white;
-    font-size: 1.5vw;
-}
-
-#container-skills p {
-    position: relative;
-    left: 0;
-    right: 0;
-    padding-top: 50px;
-    margin: auto;
-    width: 70%;
-    text-align: center;
-}
-
-.container-ikon-front {
-    width: 70%;
-    padding-top: 50px;
-    text-align: center;
-    margin: auto;
-}
-
-.icon-holder {
-    padding-bottom: 70px;
-}
-
-.skill-icons {
-    text-decoration: none !important;
-    font-size: 1.5vw;
-    color: #606060;
-}
-
-.code-programs {
-    transition: 1s;
-    position: relative;
-    top: 100px;
-    opacity: 0;
-    -webkit-filter: hue-rotate(60deg);
-    filter: hue-rotate(60deg);
-
-
-}
-
-.code-programs>img {
-
-}
-
-.code-programs>img:hover {
-    filter: grayscale(0%);
-    -webkit-filter: grayscale(0);
-}
-
-.skill-text {
-    padding-bottom: 50px;
+    background-image: url(../img/fly-and-spin-through-heavenly-like-clouds-white-clouds-with-grey-blue-tint_bkxwwvwfsg_thumbnail-full01.png);
 }
 
 /*slider*/
 
-#slider {
-    position: relative;
-    overflow: hidden;
-    height: 50vw;
-}
-
-#slider:hover .cover-dark {
-    opacity: 1;
-}
-
-#slider:hover .fa {
-    color: lightgrey;
-}
-
-.slide-show {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
-.cover-dark {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 50vw;
-    width: 100%;
-    background-color: rgba(1, 1, 1, 0.8);
-    opacity: 0;
-    transition: 1s;
-}
-
-.single-slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-}
-
-.single-slide img {
-    border: none;
-    width: 100%;
-    min-height: 100%;
-    transition: 1s;
-}
-
-.slider-caption {
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: 5;
-    color: white;
-    text-align: center;
-    font-size: 4.5vw;
-    text-transform: uppercase;
-    transition: 1s;
-}
-
-.added {
-    font-size: 1.8vw;
-    width: 70%;
-    top: 60%;
-    /*    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;*/
-}
-
-.single-slide .links-portfolio a {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    transition: 1s;
-}
-
-.single-slide .links-portfolio a:hover {
-    color: #7e01a3;
-}
-
-.slider-arrows {
-    width: 100vw;
-    position: relative;
-    height: auto;
-}
-
-.slider-arrows div {
-    position: absolute;
-    display: inline;
-    top: 22vw;
-    font-size: 50px;
-    color: white;
-    cursor: pointer;
-}
-
-.prev-slide {
-    z-index: 5;
-    left: 8vw;
-}
-
-.next-slide {
-    z-index: 5;
-    right: 8vw;
-}
-
-.fa:hover {
-    color: white;
-}
-
-.fa {
-    transition: 1s;
-}
-
-.fa:hover {
-    color: white;
-}
-
-#portfolio {
-    height: auto;
-}
 
 /*contact*/
 
